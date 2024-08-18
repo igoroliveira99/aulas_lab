@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 2</title>
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript">
+            let num;
+            let div = 2;
+
+            do num = prompt("Digite um número inteiro positivo", "");
+            while (!(num == parseInt(num, 10)) || num <= 0);
+
+            while (num % div != 0)
+                div++;
+
+            if (num == div)
+                alert("É primo!");
+            else
+                alert("NÃO é primo!");
+        </script>
+    </body>
+</html>
