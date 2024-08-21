@@ -3,21 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Atividade 3</title>
+        <title>Atividade 2</title>
     </head>
     <body>
         <script type="text/javascript" language="JavaScript">
             let num;
-            
+            let div = 2;
+
             do num = prompt("Digite um número inteiro positivo", "");
             while (!(num == parseInt(num, 10)) || num <= 0);
 
-            let fat = num;
+            while (num % div != 0)
+                div++;
 
-            for (let i = num - 1; i > 1; i--)
-                fat *= i;
-
-            alert(num + "! = " + fat);
+            if (num == div)
+                alert("É primo!");
+            else
+                alert("NÃO é primo!");
         </script>
+        <a href="semana1.html">Voltar</a>
     </body>
 </html>
