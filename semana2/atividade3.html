@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 3</title>
+    </head>
+    <body>
+        <script type="text/javascript" language="JavaScript">
+            function verificar() {
+                let frase = document.getElementById('frase').value.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                if (frase == frase.split('').reverse().join(''))
+                    alert('É um palíndromo!');
+                else
+                    alert('Não é um palíndromo!');
+            }
+        </script>
+        <form>
+            <label for="frase">Informe uma palavra ou frase</label><br>
+            <input type="text" id="frase" name="frase"><br>
+            <button onclick="verificar()">Verificar</button>
+        </form>
+        <a href="semana2.html">Voltar</a>
+    </body>
+</html>
