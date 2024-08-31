@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semana 3</title>
+    </head>
+    <body>
+        <form id="formulario">
+            <label for="valor">Digite um valor</label><br>
+            <input type="text" id="valor" required><br>
+            <button type="submit">Adicionar</button>
+        </form>
+        <ol id="lista"></ol>
+        <a href="../index.html">Voltar</a>
+        <script type="text/javascript" language="JavaScript">
+            let valores = [];
+
+            function AtualizarLista()
+            {
+                let lista = document.getElementById('lista');
+                lista.innerHTML = '';
+                valores.sort();
+                
+                valores.forEach(value =>
+                {
+                    let item = document.createElement('li');
+                    item.textContent = value;
+                    lista.appendChild(item);
+                });
+            }
+
+            document.getElementById('formulario').addEventListener('submit', function (evento)
+            {
+                evento.preventDefault();
+                let valor = document.getElementById('valor');
+                let novo_valor = valor.value.trim();
+
+                if (novo_valor)
+                {
+                    valores.push(novo_valor);
+                    valor.value = '';
+                    AtualizarLista();
+                }
+            });
+        </script>
+    </body>
+</html>
